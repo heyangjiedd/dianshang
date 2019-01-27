@@ -1,0 +1,111 @@
+
+$transform-time: 4s !default;
+
+@mixin rotate-transition {
+  -ms-transition: transform $transform-time ease;
+  -moz-transition: transform $transform-time ease;
+  -webkit-transition: -webkit-transform $transform-time ease;
+  -o-transition: -o-transform $transform-time ease;
+  transition: transform $transform-time ease;
+}
+
+@mixin rotate-transform ($angle) {
+  -ms-transform: rotate($angle);   /* IE 9 */
+  -moz-transform: rotate($angle);  /* Firefox */
+  -webkit-transform: rotate($angle); /* Safari 和 Chrome */
+  -o-transform: rotate($angle);  /* Opera */
+  transform: rotate($angle);
+}
+
+body { 
+  background: #ffbb00; 
+}
+.lottery-pan {
+  width: 480px;
+  margin: 0 auto;
+  .lottery-result {
+    font-size: 16px;
+    text-align: center;
+    button {
+      width: 100px;
+      line-height: 25px;
+      cursor: pointer;
+    }
+  }
+  .lottery-hide {
+    display: none;
+  }
+}
+.rotate-con-pan { 
+  background: url(../images/disk.jpg) no-repeat 0 0;
+  background-size: contain;
+  position: relative;
+  margin: 0 auto;
+  width: 480px; 
+  height: 480px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  .rotate-con-zhen {
+    background: url(../images/start.png) no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    left: 180px;
+    top: 140px;
+    width: 112px;
+    height: 224px;
+    cursor: pointer;
+  }
+  .rotate-con-zhen-rotate {
+    @include rotate-transition;
+    @include rotate-transform(1440deg);
+  }
+  .rotate1800 {
+    @include rotate-transform(1800deg);
+  }
+
+  .rotate1470 {
+    @include rotate-transform(1470deg);
+  }
+
+  .rotate1497 {
+    @include rotate-transform(1497deg);
+  }
+
+  .rotate1526 {
+    @include rotate-transform(1526deg);
+  
+  }
+
+  .rotate1556 {
+    @include rotate-transform(1556deg);
+  }
+
+  .rotate1585 {
+    @include rotate-transform(1585deg);
+  }
+
+  .rotate1618 {
+    @include rotate-transform(1618deg);
+  }
+
+  .rotate1650 {
+    @include rotate-transform(1650deg);
+  }
+
+  .rotate1682 {
+    @include rotate-transform(1682deg);
+  }
+
+  .rotate1712 {
+    @include rotate-transform(1712deg);
+  }
+
+  .rotate1742 {
+    @include rotate-transform(1742deg);
+  }
+
+  .rotate1772 {
+    @include rotate-transform(1772deg);
+  }
+}
